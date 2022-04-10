@@ -1,0 +1,22 @@
+/*Pseudoclasse são chamadas com "nome:" antes*/
+/* Estilo básicos pseudoclasses -> link:*/
+/*O mais comum para pseudo-classes de ligações são:
+
+:link – para links que nunca foram visitados.
+:visited – para links que o usuário visitou anteriormente.
+:hover – um link que o usuário passa o mouse por cima.
+:active – um link que foi clicado pelo mouse (ou dedo).*/
+a:link {
+    color: gray;
+    text-decoration: none;
+  }
+  a:visited {
+    color: purple;
+  }
+  a:hover {
+    color: aqua;
+    text-decoration: underline;
+  }
+  a:active {
+    color: red;
+  }

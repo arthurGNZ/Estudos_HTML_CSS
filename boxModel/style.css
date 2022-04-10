@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } /*tira o espaçamento lateral construido pelo próprio navegador  */
+body {
+    text-align: center;
+  }
+
+/* Elementos de caixa: 
+padding= preenchimento do elemento;
+margin= margem-> distância do elemento para outros elementos("espaço trasnparente")-> se 2 elementos ligados possuirem 2 margens diferentes, a maior será "priorizada";
+border= borda;
+*/
+h1, p {
+    background-color: #DDE0E3;
+    /*display: inline; -> torna os elementos de bloco em elementos de linnha, não recomendado;*/
+}
+h1{
+    /*padding: 50px; -> define o preenchimento do h1 em 50px em todos os lados
+    
+    Definindo o padding de todos os lados do h1, separadamente:
+    padding-top:0;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    Outro modo para definir o padding de todos os lados(quando são diferentes):
+    padding: 20px 10px;  /* Vertical  Horizontal 
+    padding: 20px 0 20px 10px;  /* Superior Direita Inferior Esquerda */
+
+    /* Estrutura border:
+    border: tamanho estilo cor;
+    */
+    margin: 20px 20px;
+
+    padding: 20px 0 20px 10px;
+    border: 2px solid black;
+}
+em, strong{
+    background-color: #B2D6FF;
+    /*display: block; ->torna os elementos de linha elementos de bloco (irão ocupar um bloco somente para eles); porém, não é recomendado fazer isso*/
+    /*padding: 10px;  irá ocorrer sobreposição, por isso, é evitado estilizar propriedades de linha;*/
+    /*padding: 5px 5px;
+    margin: 50px;
+    border: 3px dotted black;
+   */
+        
+}
+.page {
+    width: 600px;
+    margin: 0 auto;
+  }
+.synopsis{/* chama a classe synopsis. Usar nomes úteis(evitar palavras reservadas), em minúsculo e com hífens para espaços nas classes*/
+    color: #7E8184;  
+    font-style: italic;
+    margin: 50px;/* aumenta a margem da classe .page*/
+}
+.button{/* herda os atributos da div*/
+    color: #FFF;/* cor da fonte*/
+    background-color: #5995DA;
+    font-weight: bold; /* estilo(peso) da fonte*/
+    padding: 20px;
+    text-align: center;/* alinhamento do texto*/
+    border: 2px solid #5D6063;
+    border-radius: 5px;/* deixar a borda com pontas curvas*/
+    width: 200px; 
+    /*box-sizing: content-box;  ajustar elementos com o espaço que tem disponível*/
+    margin: 20px auto;
+}
+.call-to-action{/* composição de classes: nova classe, em que seus atributos sobrepõem os atributos da classe .button*/
+    font-style: italic;
+    background-color: #EEB75A;
+}
+/*Pseudoclasse são chamadas com "nome:" antes*/
+/* Estilo básicos pseudoclasses -> link:*/
+/*O mais comum para pseudo-classes de ligações são:
+:link – para links que nunca foram visitados.
+:visited – para links que o usuário visitou anteriormente.
+:hover – um link que o usuário passa o mouse por cima.
+:active – um link que foi clicado pelo mouse (ou dedo).*/
+a:link {
+    color: blue;
+    text-decoration: none;
+  }
+  a:visited {
+    color: purple;
+  }
+  a:hover {
+    color: aqua;
+    text-decoration: underline;
+  }
+  a:active {
+    color: red;
+  }
+a:visited:hover{ /*Mistura 2 elementos-> links que já foram visitados serão laranja no estado de hover*/
+    color: orange;
+  }
+/*tornando o botão funcional: (dentro da tag a)-> adicionando pseudo-classes a eles*/
+.button:link,                 /* Mude isto */
+.button:visited {             /* Mude isto */
+  display: block;             /* Adicione isto */
+  text-decoration: none;      /* Adicione isto */
+
+  color: #FFF;                /* O resto continua o mesmo */
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+
+  width: 200px;
+  margin: 20px auto;
+}
+.button:hover,
+.button:visited:hover {
+  color: #FFF;
+  background-color: #76AEED;  /* Azul claro */
+}
+
+.call-to-action:link,
+.call-to-action:visited {
+  font-style: italic;
+  background-color: #EEB75A;     /* Amarelo */
+}
+
+.call-to-action:hover,
+.call-to-action:visited:hover {
+  background-color: #F5CF8E;     /* Amarelo claro */
+}
+
+.call-to-action:active,
+.call-to-action:visited:active {
+  background-color: #EEB75A;     /* Amarelo */
+}
+
+/* Pseudo-classes para estruturas*/
+/*:last-of-type seleciona o último elemento de um tipo particular dos elementos pais.*/
+p:last-of-type {/*último da tag p possui margem de 50px*/
+    margin-bottom: 50px;
+  }
+/*:first-of-type seleciona o primeiro elemento de um tipo*/
+p:first-of-type {/* se uma classe for um elemento p, ela também sofrerá essa modificação. DIV terão um primeiro elemento também*/
+    color: #7E8184;
+    background-color: purple;
+    font-style: italic;
+}
+/*ID*/
+#button-2 {
+    color: #5D6063;  /* Cinza escuro */
+  }

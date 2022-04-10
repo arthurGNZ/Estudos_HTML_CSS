@@ -1,0 +1,60 @@
+html{
+    font-size: 20px;
+    font-family: 'Bebas Neue', serif;
+    background-color: #00539f;
+}
+body {
+    width: 600px;  /* Faz o body ter 600px de largura*/
+    margin: 0 auto; /* primeiro valor(0) afeta a parte superior, e o segundo(auto: divide o espaço horizontal uniformemente entre esquerda e direita) a parte inferior*/
+    background-color: #FF9500;
+    padding: 0px 20px 20px 20px;/* cada valor define o tamanho do padding em uma "direção", na sequência cima, direita, baixo, esquerda. Se for definido somente um, todos terão o mesmo valor, se forem definidos 2, o primeiro será de cima e baixo e o segundo da direita e esquerda*/
+    border: 5px solid black;
+  }
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin: 0; /* retirar borda que está sobrando em cima*/
+    padding: 20px 0;
+    color: #00539F;
+    text-shadow: 3px 3px 5px black;/* adiciona "sombra do texto, o valores são: deslocamento horizontal da sombra, deslocamento vertical da sombra do texto, raio de desfoque da sombra, cor base da sombra*/
+}
+p, li{
+    font-size: 16 px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+img{
+    display: block;/*para aplicar margens a uma imagem, temos que dar o comportamento de nível de bloco a imagem usando o display: block*/
+    margin: 0 auto;
+}
+.button{
+    color:#919974;
+    background-color: #FFBA7C;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+    width: 200px;
+    margin: 20px auto; 
+}
+.button:link,
+.button:visited{
+    display: block;
+    text-decoration: none;
+    color:#919974;
+    background-color: #FFBA7C;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+    width: 150px;
+    margin: 10px auto; 
+}
+
+.button:hover,
+.button:visited:hover{
+    color: #919974;
+    background-color: #F5E7CC;
+}
