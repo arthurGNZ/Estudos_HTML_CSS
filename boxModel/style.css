@@ -146,6 +146,20 @@ p:first-of-type {/* se uma classe for um elemento p, ela também sofrerá essa m
     font-style: italic;
 }
 /*ID*/
-#button-2 {
-    color: #5D6063;  /* Cinza escuro */
+#button-2 {/*chamando ID*/
+    color: #5D6063;  /* Cinza escuro, não é recomendado ser usado para estilizar*/
   }
+/* Usado para redirecionar para outros lugares ou páginas dentro do domínio*/
+
+/*Prioridade dos seletores:*/
+/*A prioridade dos seletores que nós vimos agora é mostrada abaixo do maior para o menor:
+
+#button-2 -> id
+.button:link -> pseudo-classes
+a:link and .synopsis em (they’re equal) -> classes
+.button
+a
+*/
+/* Metodologia BEM:
+tenta fazer que as regras da CSS sejam mais reutilizáveis fazendo com que tudo seja uma classe de seletores.
+*/

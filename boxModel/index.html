@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title></title>
         <meta name="viewport" content="width=device-width"charset="utf-8">
         <link href="style.css" rel="stylesheet"/>
+        <title>BoxModel</title>
     </head>
     <body>
-        <h1>Fazer Front é Difícil!</h1>
+        <h1 id="#cabecalho">Fazer Front é Difícil!</h1>
         
         <p>Primeiro, precisamos aprender o básico da HTML. <a href="http://www.google.com">google</a></p>
     
@@ -34,6 +34,9 @@
 
         <h1>ID</h1>
         <!--Links que referenciam para um outro lugar na mesma página. EX: rolar para baixo-->
-        <a id='button-2' class='button' href='http://google.com' target="_blank">Botão Dois</a>
+        <p></p>
+        <a id='button-2' class='button' href='http://google.com' target="_blank">Botão Dois</a><!-- ID é único, ele não pode ser reutilizado em outro elemento-->
+        <a href="#cabecalho">Teste id p/ outro lugar</a><!-- É necessário conteúdo para deixar longe--><br>
+        <a href="../index.html#externo">Lugar externo</a>
     </body>
 </html>
